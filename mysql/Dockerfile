@@ -1,0 +1,5 @@
+ARG MYSQL_VERSION=lastest
+
+FROM mysql:${MYSQL_VERSION}
+
+
