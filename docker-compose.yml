@@ -1,0 +1,58 @@
+version: "3.7"
+
+networks:
+  backend:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+
+### Redis ################################################
+  # master
+  redis:
+    build:
+      context: ./redis
+    deploy:
+      restart_policy:
+        condition: always
+    volumes:
+      - ${DATA_PATH_HOST}/redis/master:/data
+      - ./redis/master/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - ${REDIS_PORT}:6379
+    networks:
+      - backend
+
+  # slave 1
+  redis-slave1:
+    image: johnsondock_redis:latest
+    volumes:
+      - ${DATA_PATH_HOST}/redis/slave1:/data
+      - ./redis/slave/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - ${REDIS_SLAVE1_PORT}:6379
+    links:
+      - redis
+    networks:
+      - backend
+    depends_on:
+      - redis
+
+  # slave 2
+  redis-slave2:
+    image: johnsondock_redis:latest
+    volumes:
+      - ${DATA_PATH_HOST}/redis/slave2:/data
+      - ./redis/slave/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - ${REDIS_SLAVE2_PORT}:6379
+    links:
+      - redis
+    networks:
+      - backend
+    depends_on:
+      - redis
+
+
+### Redis ################################################
+  mysql:
+    build:
