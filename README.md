@@ -1,39 +1,27 @@
 # johnsondock
 
 #### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+**可以用此项目通过docker-compose一键搭建php-nginx-mysql-redis的环境**
 
 #### 软件架构
-软件架构说明
+nginx php-fmp mysql redis 各自运行在各自的容器中，相互隔离，通过docker network相互通信
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 需先安装docker和docker-compose服务
+2. 把项目下载到本地 
+    ``git clone https://gitee.com/Johnson8178/johnsondock.git``
+3. 配置环境变量 
+    ``cp env.example .env``
+4. 运行容器
+    ``docker-compose up -d nginx mysql redis``
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. 因为使用Dockerfile创建的容器镜像，所以会有很多中间层镜像，并且这些镜像在容器运行中是不能删除的，那么就会多占挺多硬盘空间，
+所以我想到的做法是，用Dockerfile创建好镜像后上传到自己的镜像库，然后再删除之前用Dockerfile创建的所有镜像，最后在
+docker-compose.yml文件中基于自己镜像库中的镜像启动容器，就可以避免服务器中有大量中间层镜像。
+2. 如果想修改镜像中的环境，也可以基于自己镜像库中的镜像，创建Dockerfile文件，然后生成新的镜像，再基于新的镜像启动容器。
+虽然有点绕，但我觉得比白白占我很多空间好。特别是php-fpm这个镜像，中间层有十几层，每层都有500m左右的大小。
 
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
