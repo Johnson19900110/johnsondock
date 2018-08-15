@@ -96,6 +96,7 @@ services:
 #        - INSTALL_IMAP=${PHP_FPM_INSTALL_IMAP}
 #        - INSTALL_CALENDAR=${PHP_FPM_INSTALL_CALENDAR}
     image: johnson19900110/php-fpm:latest
+    restart: always
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
       - ./php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
@@ -115,6 +116,7 @@ services:
 #        - PHP_UPSTREAM_CONTAINER=${NGINX_PHP_UPSTREAM_CONTAINER}
 #        - PHP_UPSTREAM_PORT=${NGINX_PHP_UPSTREAM_PORT}
     image: johnson19900110/nginx:latest
+    restart: always
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
       - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
@@ -124,5 +126,81 @@ services:
       - "${NGINX_HOST_HTTPS_PORT}:443"
     depends_on:
       - php-fpm
+    networks:
+      - backend
+
+### INNODB-CLUSTER ##########################################
+  innodb-cluster:
+    image: johnson19900110/innodb-cluster
+    restart: always
+    hostname: innodb-cluster
+    environment:
+      - MYSQL_ROOT_PASSWORD=${INNODB_CLUSTER_ROOT_PASSWORD}
+      - GROUP_NAME=${INNODB_CLUSTER_GROUP_NAME}
+      - BOOTSTRAP=1
+    volumes:
+      - ./mysql/innodb-cluster/data/1:/var/lib/mysql
+
+  innodb-cluster-2:
+    image: johnson19900110/innodb-cluster
+    restart: always
+    hostname: innodb-cluster-2
+    environment:
+      - MYSQL_ROOT_PASSWORD=${INNODB_CLUSTER_ROOT_PASSWORD}
+      - GROUP_NAME=${INNODB_CLUSTER_GROUP_NAME}
+      - GROUP_SEEDS=innodb-cluster:6606,innodb-cluster-3:6606
+    volumes:
+      - ./mysql/innodb-cluster/data/2:/var/lib/mysql
+    depends_on:
+      - innodb-cluster
+
+  innodb-cluster-3:
+    image: johnson19900110/innodb-cluster
+    restart: always
+    hostname: innodb-cluster-3
+    environment:
+      - MYSQL_ROOT_PASSWORD=${INNODB_CLUSTER_ROOT_PASSWORD}
+      - GROUP_NAME=${INNODB_CLUSTER_GROUP_NAME}
+      - GROUP_SEEDS=innodb-cluster:6606,innodb-cluster-2:6606
+    volumes:
+      - ./mysql/innodb-cluster/data/3:/var/lib/mysql
+    depends_on:
+     - innodb-cluster
+
+  router:
+    image: johnson19900110/innodb-cluster
+    restart: always
+    hostname: router
+    ports:
+      - "3306:3306"
+      - "6606:6606"
+      - "6446:6446"
+      - "6447:6447"
+    volumes:
+      - ./mysql/innodb-cluster/data/router:/var/lib/mysqlrouter
+    depends_on:
+      - innodb-cluster
+      - innodb-cluster-2
+      - innodb-cluster-3
+    environment:
+      - NODE_TYPE=router
+      - MYSQL_ROOT_PASSWORD=${INNODB_CLUSTER_ROOT_PASSWORD}
+      - MYSQL_HOST=innodb-cluster
+
+
+### ELASTICSEARCH ##########################################
+  elasticsearch:
+    image: johnson19900110/elasticsearch-ik
+#    build:
+#      context: ./elasticsearch
+#      args:
+#        - ES_VERSION=${ES_VERSION}
+    container_name: elasticsearch
+    restart: always
+    volumes:
+      - /data/elasticsearch/data:/usr/share/elasticsearch/data
+      - /data/elasticsearch/config/analysis-ik/mydict.dic:/usr/share/elasticsearch/config/analysis-ik/custom/mydict.dic
+    ports:
+      - 9200:9200
     networks:
       - backend

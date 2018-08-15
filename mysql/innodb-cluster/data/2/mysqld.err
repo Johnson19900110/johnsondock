@@ -1,0 +1,346 @@
+2018-08-10T06:30:29.569925Z 0 [Warning] No argument was provided to --log-bin, and --log-bin-index was not used; so replication may break when this MySQL server acts as a master and has his hostname changed!! Please use '--log-bin=innodb-cluster-2-bin' to avoid this problem.
+2018-08-10T06:30:29.575717Z 0 [ERROR] InnoDB: Failed to create check sector file, errno:22 Please confirm O_DIRECT is supported and remove the file ./check_sector_size if it exists.
+2018-08-10T06:30:30.932171Z 0 [Warning] InnoDB: New log files created, LSN=47547
+2018-08-10T06:30:31.115935Z 0 [Warning] InnoDB: The parameter innodb_undo_logs is deprecated and may be removed in future releases. Please use innodb_rollback_segments instead. See http://dev.mysql.com/doc/refman/5.7/en/innodb-undo-logs.html
+2018-08-10T06:30:31.118013Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.
+2018-08-10T06:30:31.174528Z 0 [Warning] unknown variable 'loose-group-replication-ip-whitelist=0.0.0.0/0'
+2018-08-10T06:30:31.189473Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: e118c5f5-9c66-11e8-b446-0242ac160003.
+2018-08-10T06:30:31.191591Z 0 [Warning] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2018-08-10T06:30:31.195240Z 0 [Warning] Failed to set up SSL because of the following SSL library error: SSL_CTX_set_default_verify_paths failed
+2018-08-10T06:30:31.325221Z 1 [Warning] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2018-08-10T06:30:34.847917Z 1 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.848277Z 1 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.848605Z 1 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.849554Z 1 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.849932Z 1 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.850589Z 1 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.851381Z 1 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:34.851655Z 1 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.460919Z 0 [Note] mysqld (mysqld 5.7.20-log) starting as process 49 ...
+2018-08-10T06:30:37.471783Z 0 [Warning] No argument was provided to --log-bin, and --log-bin-index was not used; so replication may break when this MySQL server acts as a master and has his hostname changed!! Please use '--log-bin=innodb-cluster-2-bin' to avoid this problem.
+2018-08-10T06:30:37.479556Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-08-10T06:30:37.479939Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-08-10T06:30:37.480248Z 0 [Note] InnoDB: Uses event mutexes
+2018-08-10T06:30:37.480659Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-08-10T06:30:37.480946Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-08-10T06:30:37.481267Z 0 [Note] InnoDB: Using Linux native AIO
+2018-08-10T06:30:37.481593Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 4 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2018-08-10T06:30:37.482208Z 0 [Note] InnoDB: Number of pools: 1
+2018-08-10T06:30:37.482640Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-08-10T06:30:37.483756Z 0 [ERROR] InnoDB: Failed to create check sector file, errno:22 Please confirm O_DIRECT is supported and remove the file ./check_sector_size if it exists.
+2018-08-10T06:30:37.484903Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-08-10T06:30:37.492191Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-08-10T06:30:37.494322Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-08-10T06:30:37.532990Z 0 [Note] InnoDB: Opened 2 undo tablespaces
+2018-08-10T06:30:37.533304Z 0 [Note] InnoDB: 0 undo tablespaces made active
+2018-08-10T06:30:37.533781Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-08-10T06:30:37.615700Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-08-10T06:30:37.616507Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-08-10T06:30:37.691732Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-08-10T06:30:37.693900Z 0 [Warning] InnoDB: The parameter innodb_undo_logs is deprecated and may be removed in future releases. Please use innodb_rollback_segments instead. See http://dev.mysql.com/doc/refman/5.7/en/innodb-undo-logs.html
+2018-08-10T06:30:37.694830Z 0 [Note] InnoDB: 1 redo rollback segment(s) found. 1 redo rollback segment(s) are active.
+2018-08-10T06:30:37.695171Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-08-10T06:30:37.696153Z 0 [Note] InnoDB: Waiting for purge to start
+2018-08-10T06:30:37.748270Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 1390231
+2018-08-10T06:30:37.748940Z 0 [Note] Plugin 'ARCHIVE' is disabled.
+2018-08-10T06:30:37.749319Z 0 [Note] Plugin 'BLACKHOLE' is disabled.
+2018-08-10T06:30:37.749633Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-08-10T06:30:37.750001Z 0 [Note] Plugin 'partition' is disabled.
+2018-08-10T06:30:37.749720Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2018-08-10T06:30:37.760071Z 0 [Warning] unknown variable 'loose-group-replication-ip-whitelist=0.0.0.0/0'
+2018-08-10T06:30:37.793205Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180810  6:30:37
+2018-08-10T06:30:37.804908Z 0 [Note] Skipping generation of SSL certificates as options related to SSL are specified.
+2018-08-10T06:30:37.805946Z 0 [Warning] Failed to set up SSL because of the following SSL library error: SSL_CTX_set_default_verify_paths failed
+2018-08-10T06:30:37.806824Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2018-08-10T06:30:37.843964Z 0 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.844252Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.844654Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.845417Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.845643Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.846488Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.893573Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:37.893915Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:38.097268Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-08-10T06:30:38.097848Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.20-log'  socket: '/var/lib/mysql/mysql.sock'  port: 0  MySQL Community Server (GPL)
+2018-08-10T06:30:38.098173Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-08-10T06:30:38.098449Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-08-10T06:30:38.456895Z 0 [Note] End of list of non-natively partitioned tables
+2018-08-10T06:30:42.212767Z 6 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.212977Z 6 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.213416Z 6 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.213684Z 6 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.214155Z 6 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.214440Z 6 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.214634Z 6 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:42.254590Z 8 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--relay-log=innodb-cluster-2-relay-bin' to avoid this problem.
+2018-08-10T06:30:42.267249Z 8 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_recovery' executed'. Previous state master_host='', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:30:42.281380Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2018-08-10T06:30:42.281587Z 0 [Note] Shutting down slave threads
+2018-08-10T06:30:42.281762Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2018-08-10T06:30:42.281938Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2018-08-10T06:30:42.282882Z 0 [Note] Binlog end
+2018-08-10T06:30:42.288317Z 0 [Note] Shutting down plugin 'ngram'
+2018-08-10T06:30:42.288515Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2018-08-10T06:30:42.288704Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2018-08-10T06:30:42.288874Z 0 [Note] Shutting down plugin 'MyISAM'
+2018-08-10T06:30:42.289038Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2018-08-10T06:30:42.289222Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2018-08-10T06:30:42.289386Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2018-08-10T06:30:42.289556Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2018-08-10T06:30:42.289722Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2018-08-10T06:30:42.289874Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2018-08-10T06:30:42.290047Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2018-08-10T06:30:42.290219Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2018-08-10T06:30:42.290389Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2018-08-10T06:30:42.290559Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2018-08-10T06:30:42.290723Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2018-08-10T06:30:42.290937Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2018-08-10T06:30:42.291139Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2018-08-10T06:30:42.291322Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2018-08-10T06:30:42.291494Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2018-08-10T06:30:42.291688Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2018-08-10T06:30:42.291872Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2018-08-10T06:30:42.292045Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2018-08-10T06:30:42.292206Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2018-08-10T06:30:42.292363Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2018-08-10T06:30:42.292520Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2018-08-10T06:30:42.292677Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2018-08-10T06:30:42.292834Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2018-08-10T06:30:42.292992Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2018-08-10T06:30:42.293144Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2018-08-10T06:30:42.293315Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2018-08-10T06:30:42.293544Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2018-08-10T06:30:42.293726Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2018-08-10T06:30:42.293909Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2018-08-10T06:30:42.294070Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2018-08-10T06:30:42.294241Z 0 [Note] Shutting down plugin 'InnoDB'
+2018-08-10T06:30:42.294483Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2018-08-10T06:30:42.294759Z 0 [Note] InnoDB: Starting shutdown...
+2018-08-10T06:30:42.398667Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2018-08-10T06:30:42.403865Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 180810  6:30:42
+2018-08-10T06:30:43.618516Z 0 [Note] InnoDB: Shutdown completed; log sequence number 10691707
+2018-08-10T06:30:43.620443Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2018-08-10T06:30:43.620725Z 0 [Note] Shutting down plugin 'MEMORY'
+2018-08-10T06:30:43.620980Z 0 [Note] Shutting down plugin 'CSV'
+2018-08-10T06:30:43.621235Z 0 [Note] Shutting down plugin 'sha256_password'
+2018-08-10T06:30:43.621396Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2018-08-10T06:30:43.621691Z 0 [Note] Shutting down plugin 'binlog'
+2018-08-10T06:30:43.624630Z 0 [Note] mysqld: Shutdown complete
+
+2018-08-10T06:30:44.265330Z 0 [Note] mysqld (mysqld 5.7.20-log) starting as process 1 ...
+2018-08-10T06:30:44.277823Z 0 [Warning] No argument was provided to --log-bin, and --log-bin-index was not used; so replication may break when this MySQL server acts as a master and has his hostname changed!! Please use '--log-bin=innodb-cluster-2-bin' to avoid this problem.
+2018-08-10T06:30:44.283791Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-08-10T06:30:44.284138Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-08-10T06:30:44.284578Z 0 [Note] InnoDB: Uses event mutexes
+2018-08-10T06:30:44.284892Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-08-10T06:30:44.285208Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-08-10T06:30:44.285438Z 0 [Note] InnoDB: Using Linux native AIO
+2018-08-10T06:30:44.285695Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 4 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2018-08-10T06:30:44.286276Z 0 [Note] InnoDB: Number of pools: 1
+2018-08-10T06:30:44.286880Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-08-10T06:30:44.288650Z 0 [ERROR] InnoDB: Failed to create check sector file, errno:22 Please confirm O_DIRECT is supported and remove the file ./check_sector_size if it exists.
+2018-08-10T06:30:44.289706Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-08-10T06:30:44.297244Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-08-10T06:30:44.299542Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-08-10T06:30:44.360466Z 0 [Note] InnoDB: Opened 2 undo tablespaces
+2018-08-10T06:30:44.360807Z 0 [Note] InnoDB: 0 undo tablespaces made active
+2018-08-10T06:30:44.361895Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-08-10T06:30:44.492940Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-08-10T06:30:44.493992Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-08-10T06:30:44.585258Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-08-10T06:30:44.588121Z 0 [Warning] InnoDB: The parameter innodb_undo_logs is deprecated and may be removed in future releases. Please use innodb_rollback_segments instead. See http://dev.mysql.com/doc/refman/5.7/en/innodb-undo-logs.html
+2018-08-10T06:30:44.589661Z 0 [Note] InnoDB: 1 redo rollback segment(s) found. 1 redo rollback segment(s) are active.
+2018-08-10T06:30:44.590307Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-08-10T06:30:44.592081Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 10691707
+2018-08-10T06:30:44.593593Z 0 [Note] Plugin 'ARCHIVE' is disabled.
+2018-08-10T06:30:44.593914Z 0 [Note] Plugin 'BLACKHOLE' is disabled.
+2018-08-10T06:30:44.594231Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-08-10T06:30:44.594342Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2018-08-10T06:30:44.594831Z 0 [Note] Plugin 'partition' is disabled.
+2018-08-10T06:30:44.662473Z 0 [Note] Skipping generation of SSL certificates as options related to SSL are specified.
+2018-08-10T06:30:44.663762Z 0 [Warning] Failed to set up SSL because of the following SSL library error: SSL_CTX_set_default_verify_paths failed
+2018-08-10T06:30:44.665076Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2018-08-10T06:30:44.671187Z 0 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+2018-08-10T06:30:44.671836Z 0 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+2018-08-10T06:30:44.672238Z 0 [Note] Server socket created on IP: '0.0.0.0'.
+2018-08-10T06:30:44.711080Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180810  6:30:44
+2018-08-10T06:30:44.718089Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.718527Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.720060Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.720454Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.721709Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.772896Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.773331Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:30:44.798394Z 0 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--relay-log=innodb-cluster-2-relay-bin' to avoid this problem.
+2018-08-10T06:30:44.817871Z 0 [Note] Relay log recovery skipped for group replication channel.
+2018-08-10T06:30:44.818217Z 0 [Warning] Recovery from master pos 4 and file  for channel 'group_replication_recovery'. Previous relay log pos and relay log file had been set to 4, ./innodb-cluster-2-relay-bin-group_replication_recovery.000001 respectively.
+2018-08-10T06:30:45.028956Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-08-10T06:30:45.029542Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.20-log'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+2018-08-10T06:30:45.029859Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-08-10T06:30:45.031044Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-08-10T06:30:45.470034Z 0 [Note] End of list of non-natively partitioned tables
+2018-08-10T06:30:45.470858Z 3 [Note] Plugin group_replication reported: 'Group communication SSL configuration: group_replication_ssl_mode: "DISABLED"'
+2018-08-10T06:30:45.474056Z 3 [Note] Plugin group_replication reported: '[GCS] Translated 'innodb-cluster-2' to 172.22.0.3'
+2018-08-10T06:30:45.475467Z 3 [Warning] Plugin group_replication reported: '[GCS] Automatically adding IPv4 localhost address to the whitelist. It is mandatory that it is added.'
+2018-08-10T06:30:45.475944Z 3 [Note] Plugin group_replication reported: '[GCS] SSL was not enabled'
+2018-08-10T06:30:45.476219Z 3 [Note] Plugin group_replication reported: 'Initialized group communication with configuration: group_replication_group_name: "C55153C1-1574-4972-BF06-7332D6AD46A7"; group_replication_local_address: "innodb-cluster-2:6606"; group_replication_group_seeds: "innodb-cluster:6606,innodb-cluster-3:6606"; group_replication_bootstrap_group: false; group_replication_poll_spin_loops: 0; group_replication_compression_threshold: 1000000; group_replication_ip_whitelist: "0.0.0.0/0"'
+2018-08-10T06:30:45.476504Z 3 [Note] Plugin group_replication reported: 'Member configuration: member_id: 153; member_uuid: "e118c5f5-9c66-11e8-b446-0242ac160003"; single-primary mode: "true"; group_replication_auto_increment_increment: 7; '
+2018-08-10T06:30:45.495210Z 4 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_applier' executed'. Previous state master_host='', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:30:45.537888Z 3 [Note] Plugin group_replication reported: 'Group Replication applier module successfully initialized!'
+2018-08-10T06:30:45.538100Z 3 [Note] Plugin group_replication reported: 'auto_increment_increment is set to 7'
+2018-08-10T06:30:45.538347Z 3 [Note] Plugin group_replication reported: 'auto_increment_offset is set to 153'
+2018-08-10T06:30:45.538684Z 0 [Note] Plugin group_replication reported: 'state 0 action xa_init'
+2018-08-10T06:30:45.538859Z 7 [Note] Slave SQL thread for channel 'group_replication_applier' initialized, starting replication in log 'FIRST' at position 0, relay log './innodb-cluster-2-relay-bin-group_replication_applier.000001' position: 4
+2018-08-10T06:30:45.559098Z 0 [Note] Plugin group_replication reported: 'Successfully bound to 0.0.0.0:6606 (socket=49).'
+2018-08-10T06:30:45.559771Z 0 [Note] Plugin group_replication reported: 'Successfully set listen backlog to 32 (socket=49)!'
+2018-08-10T06:30:45.560258Z 0 [Note] Plugin group_replication reported: 'Successfully unblocked socket (socket=49)!'
+2018-08-10T06:30:45.560822Z 0 [Note] Plugin group_replication reported: 'Ready to accept incoming connections on 0.0.0.0:6606 (socket=49)!'
+2018-08-10T06:30:45.560884Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.562213Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 51'
+2018-08-10T06:30:45.562968Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.563468Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 53'
+2018-08-10T06:30:45.564331Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.564884Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 55'
+2018-08-10T06:30:45.565643Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.566220Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 57'
+2018-08-10T06:30:45.566968Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.567520Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 59'
+2018-08-10T06:30:45.568330Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:30:45.568996Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 61'
+2018-08-10T06:30:45.569689Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster 6606'
+2018-08-10T06:30:45.570709Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster 6606 fd 63'
+2018-08-10T06:30:46.577729Z 0 [Note] Plugin group_replication reported: 'state 4337 action xa_snapshot'
+2018-08-10T06:30:46.583425Z 0 [Note] Plugin group_replication reported: 'new state x_recover'
+2018-08-10T06:30:46.583883Z 0 [Note] Plugin group_replication reported: 'state 4357 action xa_complete'
+2018-08-10T06:30:46.584397Z 0 [Note] Plugin group_replication reported: 'new state x_run'
+2018-08-10T06:30:52.201152Z 3 [Note] Plugin group_replication reported: 'This server is working as secondary member with primary member address innodb-cluster:3306.'
+2018-08-10T06:30:52.202028Z 15 [Note] Plugin group_replication reported: 'Establishing group recovery connection with a possible donor. Attempt 1/10'
+2018-08-10T06:30:52.202187Z 0 [Note] Plugin group_replication reported: 'Group membership changed to innodb-cluster:3306, innodb-cluster-2:3306, innodb-cluster-3:3306 on view 15338825991758656:2.'
+2018-08-10T06:30:52.227641Z 15 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_recovery' executed'. Previous state master_host='', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='innodb-cluster', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:30:52.252781Z 15 [Note] Plugin group_replication reported: 'Establishing connection to a group replication recovery donor c598db04-9c66-11e8-b380-0242ac160002 at innodb-cluster port: 3306.'
+2018-08-10T06:30:52.253263Z 17 [Warning] Storing MySQL user name or password information in the master info repository is not secure and is therefore not recommended. Please consider using the USER and PASSWORD connection options for START SLAVE; see the 'START SLAVE Syntax' in the MySQL Manual for more information.
+2018-08-10T06:30:52.254660Z 17 [Note] Slave I/O thread for channel 'group_replication_recovery': connected to master 'root@innodb-cluster:3306',replication started in log 'FIRST' at position 4
+2018-08-10T06:30:52.264948Z 18 [Note] Slave SQL thread for channel 'group_replication_recovery' initialized, starting replication in log 'FIRST' at position 0, relay log './innodb-cluster-2-relay-bin-group_replication_recovery.000001' position: 4
+2018-08-10T06:30:52.567242Z 15 [Note] Plugin group_replication reported: 'Terminating existing group replication donor connection and purging the corresponding logs.'
+2018-08-10T06:30:52.569146Z 17 [Note] Slave I/O thread killed while reading event for channel 'group_replication_recovery'
+2018-08-10T06:30:52.569368Z 17 [Note] Slave I/O thread exiting for channel 'group_replication_recovery', read up to log 'innodb-cluster-bin.000002', position 15550
+2018-08-10T06:30:52.590958Z 15 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_recovery' executed'. Previous state master_host='innodb-cluster', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:30:52.638048Z 0 [Note] Plugin group_replication reported: 'The member with address innodb-cluster-3:3306 was declared online within the replication group'
+2018-08-10T06:30:52.640726Z 0 [Note] Plugin group_replication reported: 'This server was declared online within the replication group'
+2018-08-10T06:47:27.078186Z 0 [Note] mysqld (mysqld 5.7.20-log) starting as process 1 ...
+2018-08-10T06:47:27.090542Z 0 [Warning] No argument was provided to --log-bin, and --log-bin-index was not used; so replication may break when this MySQL server acts as a master and has his hostname changed!! Please use '--log-bin=innodb-cluster-2-bin' to avoid this problem.
+2018-08-10T06:47:27.096689Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-08-10T06:47:27.096989Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-08-10T06:47:27.097316Z 0 [Note] InnoDB: Uses event mutexes
+2018-08-10T06:47:27.097637Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-08-10T06:47:27.097988Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-08-10T06:47:27.098273Z 0 [Note] InnoDB: Using Linux native AIO
+2018-08-10T06:47:27.098621Z 0 [Note] InnoDB: Adjusting innodb_buffer_pool_instances from 4 to 1 since innodb_buffer_pool_size is less than 1024 MiB
+2018-08-10T06:47:27.099210Z 0 [Note] InnoDB: Number of pools: 1
+2018-08-10T06:47:27.099697Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-08-10T06:47:27.101128Z 0 [ERROR] InnoDB: Failed to create check sector file, errno:22 Please confirm O_DIRECT is supported and remove the file ./check_sector_size if it exists.
+2018-08-10T06:47:27.102347Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-08-10T06:47:27.113980Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-08-10T06:47:27.117702Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-08-10T06:47:27.164767Z 0 [Note] InnoDB: Opened 2 undo tablespaces
+2018-08-10T06:47:27.165113Z 0 [Note] InnoDB: 0 undo tablespaces made active
+2018-08-10T06:47:27.165816Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-08-10T06:47:27.195620Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 10787469
+2018-08-10T06:47:27.195993Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 10787478
+2018-08-10T06:47:27.196385Z 0 [Note] InnoDB: Database was not shutdown normally!
+2018-08-10T06:47:27.196691Z 0 [Note] InnoDB: Starting crash recovery.
+2018-08-10T06:47:27.214334Z 0 [Note] InnoDB: Last MySQL binlog file position 0 13947, file name innodb-cluster-2-bin.000002
+2018-08-10T06:47:27.443890Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2018-08-10T06:47:27.444305Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-08-10T06:47:27.446496Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-08-10T06:47:27.570081Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-08-10T06:47:27.572737Z 0 [Warning] InnoDB: The parameter innodb_undo_logs is deprecated and may be removed in future releases. Please use innodb_rollback_segments instead. See http://dev.mysql.com/doc/refman/5.7/en/innodb-undo-logs.html
+2018-08-10T06:47:27.573988Z 0 [Note] InnoDB: 1 redo rollback segment(s) found. 1 redo rollback segment(s) are active.
+2018-08-10T06:47:27.574534Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-08-10T06:47:27.575884Z 0 [Note] InnoDB: Waiting for purge to start
+2018-08-10T06:47:27.627073Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 10787478
+2018-08-10T06:47:27.627924Z 0 [Note] Plugin 'ARCHIVE' is disabled.
+2018-08-10T06:47:27.628308Z 0 [Note] Plugin 'BLACKHOLE' is disabled.
+2018-08-10T06:47:27.628819Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-08-10T06:47:27.629262Z 0 [Note] Plugin 'partition' is disabled.
+2018-08-10T06:47:27.628888Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2018-08-10T06:47:27.650187Z 0 [Note] Recovering after a crash using innodb-cluster-2-bin
+2018-08-10T06:47:27.652017Z 0 [Note] Starting crash recovery...
+2018-08-10T06:47:27.652497Z 0 [Note] Crash recovery finished.
+2018-08-10T06:47:27.699064Z 0 [Note] Skipping generation of SSL certificates as options related to SSL are specified.
+2018-08-10T06:47:27.700324Z 0 [Warning] Failed to set up SSL because of the following SSL library error: SSL_CTX_set_default_verify_paths failed
+2018-08-10T06:47:27.701757Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2018-08-10T06:47:27.709412Z 0 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+2018-08-10T06:47:27.709862Z 0 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+2018-08-10T06:47:27.710961Z 0 [Note] Server socket created on IP: '0.0.0.0'.
+2018-08-10T06:47:27.735396Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180810  6:47:27
+2018-08-10T06:47:27.774637Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.774980Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.775370Z 0 [Warning] 'user' entry 'mysql_innodb_cluster_r4303160892@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.776254Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.776599Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.777559Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.828756Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.829004Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2018-08-10T06:47:27.855522Z 0 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--relay-log=innodb-cluster-2-relay-bin' to avoid this problem.
+2018-08-10T06:47:27.872202Z 0 [Note] Relay log recovery skipped for group replication channel.
+2018-08-10T06:47:27.872483Z 0 [Warning] Recovery from master pos 65 and file  for channel 'group_replication_applier'. Previous relay log pos and relay log file had been set to 4, ./innodb-cluster-2-relay-bin-group_replication_applier.000002 respectively.
+2018-08-10T06:47:27.898042Z 0 [Note] Relay log recovery skipped for group replication channel.
+2018-08-10T06:47:27.898488Z 0 [Warning] Recovery from master pos 4 and file  for channel 'group_replication_recovery'. Previous relay log pos and relay log file had been set to 4, ./innodb-cluster-2-relay-bin-group_replication_recovery.000001 respectively.
+2018-08-10T06:47:28.127271Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-08-10T06:47:28.127794Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.20-log'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+2018-08-10T06:47:28.128086Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-08-10T06:47:28.128397Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-08-10T06:47:28.636905Z 0 [Note] End of list of non-natively partitioned tables
+2018-08-10T06:47:28.637757Z 3 [Note] Plugin group_replication reported: 'Group communication SSL configuration: group_replication_ssl_mode: "DISABLED"'
+2018-08-10T06:47:28.639141Z 3 [Note] Plugin group_replication reported: '[GCS] Translated 'innodb-cluster-2' to 172.22.0.4'
+2018-08-10T06:47:28.640465Z 3 [Warning] Plugin group_replication reported: '[GCS] Automatically adding IPv4 localhost address to the whitelist. It is mandatory that it is added.'
+2018-08-10T06:47:28.640903Z 3 [Note] Plugin group_replication reported: '[GCS] SSL was not enabled'
+2018-08-10T06:47:28.641289Z 3 [Note] Plugin group_replication reported: 'Initialized group communication with configuration: group_replication_group_name: "C55153C1-1574-4972-BF06-7332D6AD46A7"; group_replication_local_address: "innodb-cluster-2:6606"; group_replication_group_seeds: "innodb-cluster:6606,innodb-cluster-3:6606"; group_replication_bootstrap_group: false; group_replication_poll_spin_loops: 0; group_replication_compression_threshold: 1000000; group_replication_ip_whitelist: "0.0.0.0/0"'
+2018-08-10T06:47:28.642331Z 3 [Note] Plugin group_replication reported: 'Member configuration: member_id: 215; member_uuid: "e118c5f5-9c66-11e8-b446-0242ac160003"; single-primary mode: "true"; group_replication_auto_increment_increment: 7; '
+2018-08-10T06:47:28.646061Z 4 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_applier' executed'. Previous state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 65, master_bind=''. New state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:47:28.688616Z 3 [Note] Plugin group_replication reported: 'Group Replication applier module successfully initialized!'
+2018-08-10T06:47:28.689145Z 3 [Note] Plugin group_replication reported: 'auto_increment_increment is set to 7'
+2018-08-10T06:47:28.689588Z 3 [Note] Plugin group_replication reported: 'auto_increment_offset is set to 215'
+2018-08-10T06:47:28.690231Z 0 [Note] Plugin group_replication reported: 'state 0 action xa_init'
+2018-08-10T06:47:28.690515Z 7 [Note] Slave SQL thread for channel 'group_replication_applier' initialized, starting replication in log 'FIRST' at position 0, relay log './innodb-cluster-2-relay-bin-group_replication_applier.000003' position: 4
+2018-08-10T06:47:28.718839Z 0 [Note] Plugin group_replication reported: 'Successfully bound to 0.0.0.0:6606 (socket=52).'
+2018-08-10T06:47:28.719360Z 0 [Note] Plugin group_replication reported: 'Successfully set listen backlog to 32 (socket=52)!'
+2018-08-10T06:47:28.719876Z 0 [Note] Plugin group_replication reported: 'Successfully unblocked socket (socket=52)!'
+2018-08-10T06:47:28.720269Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.720307Z 0 [Note] Plugin group_replication reported: 'Ready to accept incoming connections on 0.0.0.0:6606 (socket=52)!'
+2018-08-10T06:47:28.720861Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 53'
+2018-08-10T06:47:28.722270Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.723888Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 47'
+2018-08-10T06:47:28.724927Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.726404Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 56'
+2018-08-10T06:47:28.727883Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.728421Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 58'
+2018-08-10T06:47:28.729069Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.729568Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 60'
+2018-08-10T06:47:28.731032Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster-2 6606'
+2018-08-10T06:47:28.731608Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster-2 6606 fd 62'
+2018-08-10T06:47:28.733734Z 0 [Note] Plugin group_replication reported: 'connecting to innodb-cluster 6606'
+2018-08-10T06:47:28.735387Z 0 [Note] Plugin group_replication reported: 'client connected to innodb-cluster 6606 fd 64'
+2018-08-10T06:47:29.746143Z 0 [Note] Plugin group_replication reported: 'state 4337 action xa_snapshot'
+2018-08-10T06:47:29.752717Z 0 [Note] Plugin group_replication reported: 'new state x_recover'
+2018-08-10T06:47:29.753393Z 0 [Note] Plugin group_replication reported: 'state 4357 action xa_complete'
+2018-08-10T06:47:29.754117Z 0 [Note] Plugin group_replication reported: 'new state x_run'
+2018-08-10T06:47:29.756229Z 0 [Note] Plugin group_replication reported: 'getstart group_id f52b3bf'
+2018-08-10T06:47:35.819649Z 3 [Note] Plugin group_replication reported: 'This server is working as secondary member with primary member address innodb-cluster:3306.'
+2018-08-10T06:47:35.820398Z 14 [Note] Plugin group_replication reported: 'Establishing group recovery connection with a possible donor. Attempt 1/10'
+2018-08-10T06:47:35.820736Z 0 [Note] Plugin group_replication reported: 'Group membership changed to innodb-cluster:3306, innodb-cluster-2:3306, innodb-cluster-3:3306 on view 15338836487381167:2.'
+2018-08-10T06:47:35.853264Z 14 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_recovery' executed'. Previous state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='innodb-cluster', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:47:35.886809Z 14 [Note] Plugin group_replication reported: 'Establishing connection to a group replication recovery donor c598db04-9c66-11e8-b380-0242ac160002 at innodb-cluster port: 3306.'
+2018-08-10T06:47:35.887427Z 16 [Warning] Storing MySQL user name or password information in the master info repository is not secure and is therefore not recommended. Please consider using the USER and PASSWORD connection options for START SLAVE; see the 'START SLAVE Syntax' in the MySQL Manual for more information.
+2018-08-10T06:47:35.890051Z 16 [Note] Slave I/O thread for channel 'group_replication_recovery': connected to master 'root@innodb-cluster:3306',replication started in log 'FIRST' at position 4
+2018-08-10T06:47:35.905521Z 17 [Note] Slave SQL thread for channel 'group_replication_recovery' initialized, starting replication in log 'FIRST' at position 0, relay log './innodb-cluster-2-relay-bin-group_replication_recovery.000001' position: 4
+2018-08-10T06:47:35.989255Z 14 [Note] Plugin group_replication reported: 'Terminating existing group replication donor connection and purging the corresponding logs.'
+2018-08-10T06:47:35.991340Z 16 [Note] Slave I/O thread killed while reading event for channel 'group_replication_recovery'
+2018-08-10T06:47:35.991625Z 16 [Note] Slave I/O thread exiting for channel 'group_replication_recovery', read up to log 'innodb-cluster-bin.000003', position 2066
+2018-08-10T06:47:36.016714Z 14 [Note] 'CHANGE MASTER TO FOR CHANNEL 'group_replication_recovery' executed'. Previous state master_host='innodb-cluster', master_port= 3306, master_log_file='', master_log_pos= 4, master_bind=''. New state master_host='<NULL>', master_port= 0, master_log_file='', master_log_pos= 4, master_bind=''.
+2018-08-10T06:47:36.054624Z 0 [Note] Plugin group_replication reported: 'The member with address innodb-cluster-3:3306 was declared online within the replication group'
+2018-08-10T06:47:36.075048Z 0 [Note] Plugin group_replication reported: 'This server was declared online within the replication group'
