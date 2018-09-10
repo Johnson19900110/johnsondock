@@ -9,6 +9,8 @@ FROM php:${PHP_VERSION}-fpm
 
 MAINTAINER Johnson <2534426042@qq.com>
 
+ADD start.sh /
+
 #
 #--------------------------------------------------------------------------
 # Software's Installation
@@ -31,7 +33,26 @@ RUN apt-get -y update && \
         libssl-dev \
         libmcrypt-dev \
         apt-utils && \
-        pecl channel-update pecl.php.net
+        pecl channel-update pecl.php.net && \
+        apt-get install -y procps
+
+
+#
+#--------------------------------------------------------------------------
+# Mandatory Linux's Installation
+#--------------------------------------------------------------------------
+#
+
+#####################################
+# supervisor
+#####################################
+
+ARG INSTALL_SUPERVISOR=false
+RUN if [ ${INSTALL_SUPERVISOR} = true ]; then \
+    # Install the supervisor
+    apt-get update -yqq \
+    && apt-get -y install supervisor \
+;fi
 
 #
 #--------------------------------------------------------------------------
@@ -93,6 +114,17 @@ RUN if [ ${INSTALL_SOAP} = true ]; then \
     rm /etc/apt/preferences.d/no-debian-php && \
     apt-get -y install libxml2-dev php-soap && \
     docker-php-ext-install soap \
+;fi
+
+
+###########################################################################
+# pcntl
+###########################################################################
+
+ARG INSTALL_PCNTL=false
+RUN if [ ${INSTALL_PCNTL} = true ]; then \
+    # Installs pcntl, helpful for running Horizon
+    docker-php-ext-install pcntl \
 ;fi
 
 ###########################################################################
@@ -375,5 +407,6 @@ RUN usermod -u 1000 www-data
 WORKDIR /var/www
 
 CMD ["php-fpm"]
+#ENTRYPOINT ["/bin/bash", "/start.sh"]
 
 EXPOSE 9000

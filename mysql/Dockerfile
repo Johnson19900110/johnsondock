@@ -1,4 +1,4 @@
-ARG MYSQL_VERSION=latest
+mARG MYSQL_VERSION=latest
 
 FROM mysql:${MYSQL_VERSION}
 
