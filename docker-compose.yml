@@ -1,7 +1,5 @@
 version: "3.7"
 
-
-
 networks:
   backend:
     driver: ${NETWORKS_DRIVER}
