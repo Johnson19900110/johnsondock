@@ -7,6 +7,6 @@ LABEL maintainer="Johnson <2534426042@qq.com>"
 
 VOLUME /data
 
-EXPOSE 6379
+EXPOSE 26379
 
-CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+CMD ["redis-sentinel", "/usr/local/etc/redis/redis-sentinel.conf"]
