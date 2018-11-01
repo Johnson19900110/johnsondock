@@ -28,8 +28,6 @@ services:
       - ./redis/config/redis-slave1.conf:/usr/local/etc/redis/redis.conf
     ports:
       - ${REDIS_SLAVE1_PORT}:6379
-#    links:
-#      - redis
     networks:
       - backend
     depends_on:
@@ -44,8 +42,6 @@ services:
       - ./redis/config/redis-slave2.conf:/usr/local/etc/redis/redis.conf
     ports:
       - ${REDIS_SLAVE2_PORT}:6379
-#    links:
-#      - redis
     networks:
       - backend
     depends_on:
