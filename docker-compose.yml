@@ -85,8 +85,17 @@ services:
       - redis-slave2
       - redis-sentinel-slave1
 
+### REDIS-CLUSTER ################################################
+  redis-cluster:
+    build:
+      context: ./redis-cluster
+    restart: always
+    ports:
+      - "${MYSQL_CLUSTER_PORT}:7000"
+    networks:
+      - backend
 
-### MYSQL ################################################
+### MYSQL ########################################################
   mysql:
     #build:
       #context: ./mysql
@@ -104,6 +113,19 @@ services:
     networks:
       - backend
 
+### MYSQL_SPHINX ###################################################
+  sphinx:
+    build:
+      context: ./mysql-sphinx
+    #image: johnson19900110/mysql-sphinx:latest
+    restart: always
+    volumes:
+      - ./mysql-sphinx/etc:/etc/sphinx
+    ports:
+      - "9306:9306"
+      - "9312:9312"
+    networks:
+      - backend
 
 ### PHP-FPM ################################################
   php-fpm:
@@ -137,12 +159,14 @@ services:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
       - ./php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
       - ./php-fpm/supervisor/conf.d:/etc/supervisor/conf.d
-    expose:
-      - "9000"
+#    expose:
+#      - "9000"
+#      - "9502"
+#      - "9503"
     ports:
-      - "9501:80"
-    extra_hosts:
-      - "dockerhost:${DOCKER_HOST_IP}"
+      - "9501:9000"
+      - "9502:9502"
+      - "9503:9503"
     networks:
       - backend
 

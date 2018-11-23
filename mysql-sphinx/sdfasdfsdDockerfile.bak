@@ -1,0 +1,18 @@
+FROM centos:latest
+
+LABEL maintainer="Johnson <2534426042@qq.com>"
+
+RUN yum install -y postgresql-libs unixODBC \
+        wget \
+        autoconf \
+        automake \
+        libtool \
+        gcc-c++ \
+        mysql-devel && \
+        wget http://sphinxsearch.com/files/sphinx-2.2.11-1.rhel7.x86_64.rpm && \
+        rpm -Uhv sphinx-2.2.11-1.rhel7.x86_64.rpm && \
+        rm -rf sphinx-2.2.11-1.rhel7.x86_64.rpm && \
+        mkdir -p /usr/local/sphinx/etc && \
+        cp /usr/share/doc/sphinx.conf.dist /usr/local/sphinx/etc/sphinx.conf
+
+EXPOSE 9306 9312
