@@ -153,7 +153,8 @@ services:
 #        - INSTALL_IMAP=${PHP_FPM_INSTALL_IMAP}
 #        - INSTALL_PCNTL=${PHP_FPM_INSTALL_PCNTL}
 #        - INSTALL_CALENDAR=${PHP_FPM_INSTALL_CALENDAR}
-    image: johnson19900110/php-fpm:7.2-fpm
+    #image: johnson19900110/php-fpm:7.2-fpm
+    image: johnson19900110/php-fpm-maka
     restart: always
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
@@ -164,9 +165,11 @@ services:
 #      - "9502"
 #      - "9503"
     ports:
-      - "9501:9000"
+      - "9000"
+      - "9501:9501"
       - "9502:9502"
-      - "9503:9503"
+    cap_add:
+      - SYS_PTRACE
     networks:
       - backend
 
