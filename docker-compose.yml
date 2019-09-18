@@ -5,7 +5,16 @@ networks:
     driver: ${NETWORKS_DRIVER}
 
 services:
-
+  sf-odp:
+#    image: sf-odp
+    build:
+      context: ./sf
+    volumes:
+      - ${APP_CODE_PATH_HOST}/super-ros:${APP_CODE_PATH_CONTAINER}/sf-odp-2.0
+    ports:
+      - "8013:80"
+    networks:
+      - backend
 ### Redis ################################################
   # master
   redis:
@@ -101,7 +110,7 @@ services:
       #context: ./mysql
       #args:
       # - MYSQL_VERSION=${MYSQL_VERSION}
-    image: johnson19900110/mysql:latest
+    image: daocloud.io/library/mysql:5.7.22
     restart: always
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
